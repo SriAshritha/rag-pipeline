@@ -1,0 +1,12 @@
+langchain
+langchain-openai
+Pydantic
+PyPDF
+tqdm
+langchain-core
+chromadb
+faiss-cpu
+langchain-community
+pandas
+networkx
+unstructured
