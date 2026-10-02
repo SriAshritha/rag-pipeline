@@ -7,10 +7,7 @@ def generate_embeddings(chunks: str) -> np.ndarray:
     load_model = SentenceTransformer("all-MiniLM-L6-v2")
     texts = [chunk.page_content for chunk in chunks]
     embeddings = load_model.encode(texts,show_progress_bar = True)
+    print(f"Total number of embeddings : {len(embeddings)} and {len(embeddings[0])} is the dimension of each embedding")
+
     return embeddings
 
-if __name__ == "__main__":
-    docs = load_documents("resources")
-    chunks = chunk_files(docs)
-    embeddings = generate_embeddings(chunks)
-    print(f"Total number of embeddings : {len(embeddings)} and {len(embeddings[0])} is the dimension of each embedding")

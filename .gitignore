@@ -10,3 +10,6 @@ wheels/
 .venv
 
 resources
+
+*.env
+vector_store
